@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talua Barendo - Ikon Kuliner Minang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #e67e22; /* Warna Oranye Rempah */
+            --secondary-color: #c0392b; /* Warna Merah Cabai */
+            --dark-color: #2c3e50;
+            --light-bg: #fdfaf5;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1598103442097-8b74394b95c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); /* Gambar representatif telur/masakan */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            border-bottom: 8px solid var(--primary-color);
+        }
+
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Navbar Custom */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand { font-weight: 700; color: var(--secondary-color) !important; }
+
+        /* Card Custom */
+        .custom-card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background: white;
+            height: 100%;
+        }
+        .custom-card:hover { transform: translateY(-10px); }
+
+        .icon-box {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Video Container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Table Gizi */
+        .table-gizi {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .table-gizi thead {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Langkah Kerja */
+        .step-item {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">🥘 TALUA BARENDO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sejarah">Sejarah</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resep">Resep</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gizi">Kandungan Gizi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutorial">Tutorial</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-2">Talua Barendo</h1>
+            <p class="lead fs-3">Sensasi Renyah "Renda" Khas Bukittinggi yang Legendaris</p>
+            <a href="#resep" class="btn btn-warning btn-lg px-4 mt-3 fw-bold shadow">Lihat Resep Utama</a>
+        </div>
+    </header>
+
+    <section id="sejarah" class="py-5">
+        <div class="container">
+            <div class="row align-items:center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Warisan dari Garegeh</h2>
+                    <p class="lead">Berasal dari Bukittinggi, khususnya daerah <strong>Garegeh</strong>, Talua Barendo bukan sekadar telur dadar. Nama "Barendo" merujuk pada pinggiran telur yang keriting menyerupai hiasan renda.</p>
+                    <p>Keunikan utamanya terletak pada tekstur yang <em>crispy</em> di luar namun tetap lembut di dalam. Rahasianya? Teknik menuang adonan dari ketinggian tertentu ke dalam minyak panas yang melimpah.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded shadow-sm border-start border-warning border-4">
+                                <h5>Tekstur</h5>
+                                <p class="small mb-0">Renyah, berpori, dan estetik.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded shadow-sm border-start border-danger border-4">
+                                <h5>Aroma</h5>
+                                <p class="small mb-0">Smoky dan gurih rempah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+                    <img src="https://images.unsplash.com/photo-1518492104633-130d0cc84637?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cooking" class="img-fluid rounded-circle shadow" style="width: 80%; height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gizi" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Kandungan Gizi</h2>
+            <p class="mb-5">Estimasi per 100 gram penyajian</p>
+            <div class="row justify-content:center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="table-responsive shadow-lg table-gizi">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Zat Gizi</th>
+                                    <th>Kandungan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Energi</td><td><strong>251 kkal</strong></td></tr>
+                                <tr><td>Protein</td><td><strong>16,30 g</strong></td></tr>
+                                <tr><td>Lemak Total</td><td><strong>19,40 g</strong></td></tr>
+                                <tr><td>Karbohidrat</td><td><strong>1,40 g</strong></td></tr>
+                                <tr><td>Zat Besi</td><td><strong>2,50 mg</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resep" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Rahasia Dapur</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="custom-card p-4">
+                        <div class="icon-box">🥚</div>
+                        <h4>Bahan Utama</h4>
+                        <ul class="list-unstyled">
+                            <li>✓ Telur Bebek (Lebih Gurih)</li>
+                            <li>✓ 1 sdm Tepung Terigu</li>
+                            <li>✓ 8 Bawang Merah (Iris)</li>
+                            <li>✓ 2 Batang Daun Bawang</li>
+                            <li>✓ 1 sdm Cabai Merah Giling</li>
+                            <li>✓ Minyak (500ml - 1 Liter)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card p-4">
+                        <div class="icon-box">🍳</div>
+                        <h4>Alat Masak</h4>
+                        <ul class="list-unstyled">
+                            <li>✓ Wajan Cekung (Wok)</li>
+                            <li>✓ Mangkuk Pengocok</li>
+                            <li>✓ Spatula Panjang</li>
+                            <li>✓ Saringan Minyak</li>
+                            <li>✓ Kompor Tekanan Tinggi</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card p-4">
+                        <div class="icon-box">🛡️</div>
+                        <h4>Keselamatan</h4>
+                        <ul class="list-unstyled">
+                            <li>✓ <strong>Celemek:</strong> Hindari cipratan.</li>
+                            <li>✓ <strong>Sarung Tangan:</strong> Lindungi tangan saat tuang tinggi.</li>
+                            <li>✓ <strong>Masker:</strong> Hindari asap suhu tinggi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center">Langkah Pembuatan</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="step-item">
+                        <h5>1. Persiapan & Kocok</h5>
+                        <p>Campurkan semua bahan. Kocok hingga berbusa untuk memastikan tekstur mengembang sempurna.</p>
+                    </div>
+                    <div class="step-item">
+                        <h5>2. Teknik Tuang Tinggi (Golden Rule)</h5>
+                        <p>Panaskan minyak hingga suhu tinggi. Angkat mangkuk 20-30 cm di atas wajan, tuang melingkar secara perlahan.</p>
+                    </div>
+                    <div class="step-item">
+                        <h5>3. Pematangan & Penirisan</h5>
+                        <p>Gunakan api sedang saat tengah mulai matang agar tidak gosong. Tiriskan hingga benar-benar kering dari minyak.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutorial" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Tutorial Video</h2>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_mdTGmudn-E?si=RcGUZ3fuSG-kC5T9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center fw-bold mt-2">Bonus Jikoshouka ala JKT48 (Sebagai Wota Fans sejati JKT48) (Habib Muzakki dari kelas 12 Agama)</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KKvQLjdw3jI?si=6II352y8j550PTs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center fw-bold mt-2">Tugas Prakarya (Habib Muzakki dari 12 Agama) MAN 2 KOTA SERANG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h3>Talua Barendo Website</h3>
+            <p>Eksplorasi Kuliner Nusantara - Sumatera Barat</p>
+            <hr class="bg-light w-25 mx-auto">
+            <p class="small">Copyright &copy; 2026 Habib Muzakki. Kelas 12 Agama. MAN 2 KOTA SERANG. Dibuat dengan cinta untuk Kuliner Indonesia.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
